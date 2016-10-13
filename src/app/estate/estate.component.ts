@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-estate',
+  selector: 'estate',
   templateUrl: './estate.component.html',
   styleUrls: ['./estate.component.css']
 })
