@@ -11,6 +11,7 @@ import { SignaturesComponent } from './signatures/signatures.component';
 import { SignatureComponent } from './signature/signature.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { VisitManagementComponent } from './visit-management/visit-management.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FooterComponent } from './footer/footer.component';
     SignaturesComponent,
     SignatureComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    VisitManagementComponent
   ],
   imports: [
     BrowserModule,
