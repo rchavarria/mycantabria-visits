@@ -10,6 +10,7 @@ import { WarningComponent } from './warning/warning.component';
 import { SignaturesComponent } from './signatures/signatures.component';
 import { SignatureComponent } from './signature/signature.component';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HeaderComponent } from './header/header.component';
     WarningComponent,
     SignaturesComponent,
     SignatureComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
