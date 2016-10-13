@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { EstateComponent } from './estate/estate.component';
 import { CustomerComponent } from './customer/customer.component';
 import { WarningComponent } from './warning/warning.component';
+import { SignaturesComponent } from './signatures/signatures.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EstateComponent,
     CustomerComponent,
-    WarningComponent
+    WarningComponent,
+    SignaturesComponent
   ],
   imports: [
     BrowserModule,
