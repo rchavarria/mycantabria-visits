@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { EstateComponent } from './estate/estate.component';
+import { CustomerComponent } from './customer/customer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EstateComponent
+    EstateComponent,
+    CustomerComponent
   ],
   imports: [
     BrowserModule,
