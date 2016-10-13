@@ -9,6 +9,7 @@ import { CustomerComponent } from './customer/customer.component';
 import { WarningComponent } from './warning/warning.component';
 import { SignaturesComponent } from './signatures/signatures.component';
 import { SignatureComponent } from './signature/signature.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SignatureComponent } from './signature/signature.component';
     CustomerComponent,
     WarningComponent,
     SignaturesComponent,
-    SignatureComponent
+    SignatureComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
