@@ -8,6 +8,7 @@ import { EstateComponent } from './estate/estate.component';
 import { CustomerComponent } from './customer/customer.component';
 import { WarningComponent } from './warning/warning.component';
 import { SignaturesComponent } from './signatures/signatures.component';
+import { SignatureComponent } from './signature/signature.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SignaturesComponent } from './signatures/signatures.component';
     EstateComponent,
     CustomerComponent,
     WarningComponent,
-    SignaturesComponent
+    SignaturesComponent,
+    SignatureComponent
   ],
   imports: [
     BrowserModule,
