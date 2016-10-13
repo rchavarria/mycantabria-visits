@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { EstateComponent } from './estate/estate.component';
 import { CustomerComponent } from './customer/customer.component';
+import { WarningComponent } from './warning/warning.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EstateComponent,
-    CustomerComponent
+    CustomerComponent,
+    WarningComponent
   ],
   imports: [
     BrowserModule,
