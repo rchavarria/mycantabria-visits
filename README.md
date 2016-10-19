@@ -2,7 +2,12 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.16.
 
+# Color palette
+
+http://paletton.com/palette.php?uid=33Y0u0kllllFvq3sqnHegiZ7bgC
+
 ## Development server
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding
