@@ -1,0 +1,23 @@
+.logo {
+  float: left;
+  width: 33%;
+}
+
+.address {
+  float: left;
+  width: 33%;
+}
+
+.address p {
+  font-size: .5em;
+}
+
+.contact {
+  float: left;
+  width: 33%;
+}
+
+.contact p {
+  font-size: .5em;
+}
+
