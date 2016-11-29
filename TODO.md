@@ -1,10 +1,9 @@
 # Working on task
 
+- Draw a border around each component, by creating CSS classes inside those components (outside them doesn't work)
 
 # TODO tasks
 
-- Make `footer` component to look right, with some information in it
-- Draw a border around each component, by creating CSS classes inside those components (outside them doesn't work)
 - `warning` component: text about `buyer` and `buy/rent` could be customized for each visit
 
 # DONE tasks
@@ -16,4 +15,5 @@
 + Make `customer` component to look right, with some information in it
 + Make `warning` component to look right, with some information in it
 + Make `signatures` component to look right, with some information in it
++ Make `footer` component to look right, with some information in it
 
