@@ -1,10 +1,9 @@
 # Working on task
 
-- Style `header` elements with Foundation
+- Make `estate` component to look right, with some information in it
 
 # TODO tasks
 
-- Make `estate` component to look right, with some information in it
 - Make `customer` component to look right, with some information in it
 - Make `warning` component to look right, with some information in it
 - Make `signatures` component to look right, with some information in it
@@ -14,4 +13,5 @@
 
 + choose a color palette: http://paletton.com/palette.php?uid=33Y0u0kllllFvq3sqnHegiZ7bgC
 + Include Foundation as CSS framework
++ Style `header` elements with Foundation
 
