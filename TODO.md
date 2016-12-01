@@ -1,6 +1,6 @@
 # Working on task
 
-- Research for a JS library to allow users to sign by hand in a web page
+- Draw two fields where buyer and agent can sign by hand
 
 # TODO tasks
 
@@ -17,4 +17,5 @@
 + Make `signatures` component to look right, with some information in it
 + Make `footer` component to look right, with some information in it
 + Draw a border around each component, by creating CSS classes inside those components (outside them doesn't work)
++ Research for a JS library to allow users to sign by hand in a web page
 
