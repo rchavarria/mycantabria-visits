@@ -1,5 +1,6 @@
 # Working on task
 
+- Research for a JS library to allow users to sign by hand in a web page
 
 # TODO tasks
 
