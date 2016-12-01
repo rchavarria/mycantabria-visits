@@ -1,3 +1,7 @@
+.header {
+  border: solid 1px #414369;
+}
+
 .address p {
   font-size: .5em;
 }
