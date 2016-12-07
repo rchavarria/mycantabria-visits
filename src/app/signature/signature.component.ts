@@ -1,5 +1,7 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 
+declare var SignaturePad: any;
+
 @Component({
   selector: 'signature',
   templateUrl: './signature.component.html',
