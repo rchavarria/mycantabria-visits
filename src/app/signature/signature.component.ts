@@ -1,6 +1,6 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 
-declare var SignaturePad: any;
+import * as SignaturePad from 'signature_pad';
 
 @Component({
   selector: 'signature',
