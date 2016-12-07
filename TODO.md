@@ -1,13 +1,11 @@
 # Working on task
 
-- Fix compilation error. `SignaturePad` is not found, because it's not loaded as other dependencies. Find a way to *import* it as if it was an Angular dependency or something.
-
-
 # TODO tasks
 
 - encapsulate better how the `canvas` element is got from a `signature` component to use with the `SignaturePad` library
 - `warning` component: text about `buyer` and `buy/rent` could be customized for each visit
 - check how to avoid JS errors in the console about `SignaturePad` not in `main.bundle.js`. This must be due to that library being included outside of `npm` and `webpack` and staff
+- Must Foundation for Sites be installed as an `npm` module, or just the CSS in `src/assets`
 
 # DONE tasks
 
@@ -22,4 +20,5 @@
 + Draw a border around each component, by creating CSS classes inside those components (outside them doesn't work)
 + Research for a JS library to allow users to sign by hand in a web page
 + Draw two fields where buyer and agent can sign by hand
++ Fix compilation error. `SignaturePad` is not found, because it's not loaded as other dependencies. Find a way to *import* it as if it was an Angular dependency or something.
 
