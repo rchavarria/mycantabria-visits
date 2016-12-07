@@ -6,6 +6,7 @@ import { Component, OnInit, ElementRef } from '@angular/core';
   styleUrls: ['./signature.component.css']
 })
 export class SignatureComponent implements OnInit {
+  el: ElementRef;
 
   constructor(el: ElementRef) {
     this.el = el;
