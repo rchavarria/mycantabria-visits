@@ -1,5 +1,7 @@
 # Working on task
 
+- Fix compilation error. `SignaturePad` is not found, because it's not loaded as other dependencies. Find a way to *import* it as if it was an Angular dependency or something.
+
 
 # TODO tasks
 
