@@ -8,21 +8,32 @@ import * as SignaturePad from 'signature_pad';
   styleUrls: ['./signature.component.css']
 })
 export class SignatureComponent implements OnInit {
-  el: ElementRef;
+  private el: ElementRef;
+
+  pad: any;
 
   constructor(el: ElementRef) {
     this.el = el;
   }
 
   ngOnInit() {
+    const canvas = this.firstCanvasInComponent();
+    this.pad = new SignaturePad(canvas, this.buildPadOptions());
+  }
+
+  private firstCanvasInComponent() {
+    const selector = 'canvas';
+    const allCanvas = this.el.nativeElement.getElementsByTagName(selector);
+    return allCanvas[0];
+  }
+
+  private buildPadOptions() {
     const padOptions = {
       backgroundColor: 'rgba(255, 255, 255, 0)',
       penColor: 'rgb(0, 0, 0)'
     }
 
-    // TODO Encapsulate this a bit more
-    const canvas = this.el.nativeElement.getElementsByTagName('canvas')[0];
-    var signaturePad = new SignaturePad(canvas, padOptions);
+    return padOptions;
   }
 
 }
