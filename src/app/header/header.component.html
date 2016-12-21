@@ -1,19 +1,19 @@
 <div class="header row">
 
   <div class="small-4 columns">
-    <img src="/assets/logo.png"/>
+    <img src="{{ company.logoUrl }}"/>
   </div>
 
   <div class="address small-4 columns">
-    <p>MyCantabria Inmobiliaria</p>
-    <p>Urb. Los Rosales, 1, Oficina 1</p>
-    <p>39620 Sarón</p>
-    <p>Cantabria</p>
+    <p>{{ company.name }}</p>
+    <p>{{ company.address.street }}</p>
+    <p>{{ company.address.postalCode }} {{ company.address.city }}</p>
+    <p>{{ company.address.province }}</p>
   </div>
 
   <div class="contact small-4 columns">
-    <p>942 517 691</p>
-    <p>info@mycantabria.com</p>
+    <p>{{ company.phone }}</p>
+    <p>{{ company.email }}</p>
   </div>
 
 </div>
