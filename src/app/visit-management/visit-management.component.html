@@ -1,15 +1,15 @@
 <div class="visit-management row">
   <ul>
     <li>Visita</li>
-    <li>Fecha: 13/04/2016</li>
-    <li>Hora: 01:00</li>
+    <li>Fecha: {{ visit.date | date:'shortDate' }}</li>
+    <li>Hora: {{ visit.time | date:'mediumTime' }}</li>
   </ul>
 
   <div class="subject">
-    Asunto: Sheila - 12344321234
+    Asunto: {{ visit.subject }}
   </div>
 
   <div class="agent">
-    Agente: Artur
+    Agente: {{ visit.agent.name }}
   </div>
 </div>
