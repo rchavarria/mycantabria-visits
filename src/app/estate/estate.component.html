@@ -5,10 +5,10 @@
   </div>
 
   <div class="small-8 columns">
-    <p><b>Código</b>: 13432134</p>
-    <p><b>Dirección</b>: Calle Dalí, 8</p>
-    <p><b>Precio</b>: 400€/mes</p>
-    <p><b>Propietario</b>: Juana</p>
+    <p><b>Código</b>: {{ estate.id }}</p>
+    <p><b>Dirección</b>: {{ estate.address.street }}</p>
+    <p><b>Precio</b>: {{ estate.monthlyAmount.quantity }}{{ estate.monthlyAmount.currency }}/mes</p>
+    <p><b>Propietario</b>: {{ estate.owner.name }}</p>
   </div>
 
 </div>
