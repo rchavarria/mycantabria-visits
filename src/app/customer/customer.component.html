@@ -1,11 +1,11 @@
 <div class="customer row">
 
   <div class="small-12 columns">
-    <p><b>Código</b>: 2719</p>
+    <p><b>Código</b>: {{ customer.id }}</p>
   </div>
 
   <div class="small-12 columns">
-    <p><b>Nombre</b>: Sheila</p>
+    <p><b>Nombre</b>: {{ customer.name }}</p>
   </div>
 
   <div class="small-12 columns">
@@ -13,7 +13,7 @@
   </div>
 
   <div class="small-12 columns">
-    <p><b>Fecha de alta</b>: 22/10/2015</p>
+    <p><b>Fecha de alta</b>: {{ customer.signupDate | date:'shortDate' }}</p>
   </div>
 
   <div class="small-12 columns">
@@ -29,7 +29,7 @@
   </div>
 
   <div class="small-12 columns">
-    <p><b>Móvil</b>: 658823451</p>
+    <p><b>Móvil</b>: {{ customer.mainPhone }}</p>
   </div>
 
   <div class="small-12 columns">
@@ -45,7 +45,7 @@
   </div>
 
   <div class="small-12 columns">
-    <p><b>E-mail</b>: sheilaher1981@hotmail.com</p>
+    <p><b>E-mail</b>: {{ customer.email }}</p>
   </div>
 
 </div>
