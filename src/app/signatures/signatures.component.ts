@@ -15,8 +15,8 @@ export class SignaturesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.agentSignature = new Signature(new Person('Arturi turi'));
-    this.clientSignature = new Signature(new Person('Sheila Again'));
+    this.agentSignature = new Signature(new Person('Son Gohan'));
+    this.clientSignature = new Signature(new Person('Booboo'));
   }
 
 }
