@@ -1,6 +1,8 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
 
 import * as SignaturePad from 'signature_pad';
+
+import { Signature } from '../signatures/signature.model';
 
 @Component({
   selector: 'signature',
@@ -8,6 +10,8 @@ import * as SignaturePad from 'signature_pad';
   styleUrls: ['./signature.component.css']
 })
 export class SignatureComponent implements OnInit {
+  @Input() agent: string;
+  @Input() model: Signature;
   private el: ElementRef;
 
   pad: any;
