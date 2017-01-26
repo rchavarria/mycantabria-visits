@@ -14,12 +14,12 @@ export class VisitManagementComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    const agent = new Agent('Artur');
+    const agent = new Agent('Son Goku');
 
     this.visit = new Visit(
       new Date(),
       new Date(),
-      'Sheila - 612342123',
+      'Vegeta y Hermano Goku',
       agent
     );
   }

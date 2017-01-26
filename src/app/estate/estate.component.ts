@@ -17,15 +17,15 @@ export class EstateComponent implements OnInit {
 
   ngOnInit() {
     const address: Address = new Address(
-      'Calle Dalí, 8',
-      19162,
-      'Pioz',
-      'Cantabria'
+      'Avenida Pikolo, 14',
+      43220,
+      'Kaito',
+      'Freezer'
     );
 
     const amount = new Amount(400, '€');
 
-    const owner = new Owner('Juana la loca');
+    const owner = new Owner('Krilin');
 
     this.estate = new Estate(
       '12344321',

@@ -14,10 +14,10 @@ export class CustomerComponent implements OnInit {
 
   ngOnInit() {
     this.customer = new Customer(
-      '2719',
-      'Sheila',
-      '12344321234',
-      'sheilaher1981@hotmail.com'
+      '4321',
+      'Maestro tortuga',
+      'Isla tortuga',
+      'bulma@hotmail.com'
     );
   }
 
