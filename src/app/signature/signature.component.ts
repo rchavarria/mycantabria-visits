@@ -22,6 +22,12 @@ export class SignatureComponent implements OnInit {
 
   ngOnInit() {
     const canvas = this.firstCanvasInComponent();
+    //
+    // /!\ fix width and height so that there is no zoom effect (described in issue #18) /!\
+    //
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+
     this.pad = new SignaturePad(canvas, this.buildPadOptions());
   }
 
