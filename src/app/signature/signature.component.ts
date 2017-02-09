@@ -47,12 +47,14 @@ export class SignatureComponent implements OnInit {
   }
 
   getImage(event) {
-    console.log('image will be got');
-
     const imageAsPng = this.pad.toDataURL();
 
     const w = window.open('', 'Imagen');
     w.document.write(`<img src="${imageAsPng}"/>`);
+  }
+
+  reset(event) {
+    this.pad.clear();
   }
 
 }
