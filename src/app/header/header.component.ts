@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
     this.company = new Company(
       'MyCantabria Inmobiliaria',
       address,
-      './assets/logo.png',
+      './assets/img/logo.png',
       '942 517 691',
       'info@mycantabria.com'
     );
