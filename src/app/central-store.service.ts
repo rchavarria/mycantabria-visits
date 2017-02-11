@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { Address } from './models/address.model';
 import { Company } from './models/company.model';
+import { Customer } from './models/customer.model';
 
 @Injectable()
 export class CentralStoreService {
@@ -25,6 +26,15 @@ export class CentralStoreService {
     );
 
     return company;
+  }
+
+  getCustomer() {
+    return new Customer(
+      '4321',
+      'Maestro tortuga',
+      'Isla tortuga',
+      'bulma@hotmail.com'
+    );
   }
 
 }

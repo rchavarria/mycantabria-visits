@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Address } from '../header/address.model';
+import { Address } from '../models/address.model';
 import { Amount } from './amount.model';
 import { Owner } from './owner.model';
 import { Estate } from './estate.model';
