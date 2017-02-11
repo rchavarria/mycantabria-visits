@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Customer } from './customer.model';
+import { CentralStoreService } from '../central-store.service';
+
+import { Customer } from '../models/customer.model';
 
 @Component({
   selector: 'customer',
@@ -10,15 +12,12 @@ import { Customer } from './customer.model';
 export class CustomerComponent implements OnInit {
   customer: Customer;
 
-  constructor() { }
+  constructor(private store: CentralStoreService) {
+    this.store = store;
+  }
 
   ngOnInit() {
-    this.customer = new Customer(
-      '4321',
-      'Maestro tortuga',
-      'Isla tortuga',
-      'bulma@hotmail.com'
-    );
+    this.customer = this.store.getCustomer();
   }
 
 }

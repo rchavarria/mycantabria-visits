@@ -1,5 +1,5 @@
 
-import { Address } from '../header/address.model';
+import { Address } from './address.model';
 
 export class Customer {
   id: string;

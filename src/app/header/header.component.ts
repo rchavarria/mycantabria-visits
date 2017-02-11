@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Address } from './address.model';
-import { Company } from './company.model';
+
+import { CentralStoreService } from '../central-store.service';
+
+import { Company } from '../models/company.model';
 
 @Component({
   selector: 'header',
@@ -10,23 +12,12 @@ import { Company } from './company.model';
 export class HeaderComponent implements OnInit {
   company: Company;
 
-  constructor() { }
+  constructor(private store: CentralStoreService) {
+    this.store = store;
+  }
 
   ngOnInit() {
-    const address = new Address(
-      'Urb. Los Rosales, 1, Oficina 1',
-      39620,
-      'Sarón',
-      'Cantabria'
-    );
-
-    this.company = new Company(
-      'MyCantabria Inmobiliaria',
-      address,
-      './assets/img/logo.png',
-      '942 517 691',
-      'info@mycantabria.com'
-    );
+    this.company = this.store.getHeader();
   }
 
 }

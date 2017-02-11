@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Signature } from './signature.model';
-import { Person } from './person.model';
+import { CentralStoreService } from '../central-store.service';
+
+import { Signature } from '../models/signature.model';
 
 @Component({
   selector: 'signatures',
@@ -12,11 +13,13 @@ export class SignaturesComponent implements OnInit {
   private agentSignature: Signature;
   private clientSignature: Signature;
 
-  constructor() { }
+  constructor(private store: CentralStoreService) {
+    this.store = store;
+  }
 
   ngOnInit() {
-    this.agentSignature = new Signature(new Person('Son Gohan'));
-    this.clientSignature = new Signature(new Person('Booboo'));
+    this.agentSignature = this.store.getSignature('Son Gohan');
+    this.clientSignature = this.store.getSignature('Booboo');
   }
 
 }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Agent } from './agent.model';
-import { Visit } from './visit.model';
+import { CentralStoreService } from '../central-store.service';
+
+import { Visit } from '../models/visit.model';
 
 @Component({
   selector: 'visit-management',
@@ -11,17 +12,12 @@ import { Visit } from './visit.model';
 export class VisitManagementComponent implements OnInit {
   visit: Visit;
 
-  constructor() { }
+  constructor(private store: CentralStoreService) {
+    this.store = store;
+  }
 
   ngOnInit() {
-    const agent = new Agent('Son Goku');
-
-    this.visit = new Visit(
-      new Date(),
-      new Date(),
-      'Vegeta y Hermano Goku',
-      agent
-    );
+    this.visit = this.store.getVisit();
   }
 
 }

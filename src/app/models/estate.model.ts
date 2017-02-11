@@ -1,5 +1,5 @@
 
-import { Address } from '../header/address.model';
+import { Address } from './address.model';
 import { Amount } from './amount.model';
 import { Owner } from './owner.model';
 

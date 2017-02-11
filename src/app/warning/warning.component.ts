@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Warning } from './warning.model';
+import { CentralStoreService } from '../central-store.service';
+
+import { Warning } from '../models/warning.model';
 
 @Component({
   selector: 'warning',
@@ -10,10 +12,12 @@ import { Warning } from './warning.model';
 export class WarningComponent implements OnInit {
   warning: Warning;
 
-  constructor() { }
+  constructor(private store: CentralStoreService) {
+    this.store = store;
+  }
 
   ngOnInit() {
-    this.warning = new Warning();
+    this.warning = this.store.getWarning();
   }
 
 }
