@@ -9,6 +9,8 @@ import { Estate } from './models/estate.model';
 import { Footer } from './models/footer.model';
 import { Signature } from './models/signature.model';
 import { Person } from './models/person.model';
+import { Agent } from './models/agent.model';
+import { Visit } from './models/visit.model';
 
 @Injectable()
 export class CentralStoreService {
@@ -69,6 +71,17 @@ export class CentralStoreService {
 
   getSignature(name) {
     return new Signature(new Person(name));
+  }
+
+  getVisit() {
+    const agent = new Agent('Son Goku');
+
+    return new Visit(
+      new Date(),
+      new Date(),
+      'Vegeta y Hermano Goku',
+      agent
+    );
   }
 
 }
