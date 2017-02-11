@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Footer } from './footer.model';
+import { CentralStoreService } from '../central-store.service';
+
+import { Footer } from '../models/footer.model';
 
 @Component({
   selector: 'footer',
@@ -10,10 +12,12 @@ import { Footer } from './footer.model';
 export class FooterComponent implements OnInit {
   footer: Footer;
 
-  constructor() { }
+  constructor(private store: CentralStoreService) {
+    this.store = store;
+  }
 
   ngOnInit() {
-    this.footer = new Footer();
+    this.footer = this.store.getFooter();
   }
 
 }
