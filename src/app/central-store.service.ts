@@ -3,6 +3,9 @@ import { Injectable } from '@angular/core';
 import { Address } from './models/address.model';
 import { Company } from './models/company.model';
 import { Customer } from './models/customer.model';
+import { Amount } from './models/amount.model';
+import { Owner } from './models/owner.model';
+import { Estate } from './models/estate.model';
 
 @Injectable()
 export class CentralStoreService {
@@ -34,6 +37,26 @@ export class CentralStoreService {
       'Maestro tortuga',
       'Isla tortuga',
       'bulma@hotmail.com'
+    );
+  }
+
+  getEstate() {
+    const address: Address = new Address(
+      'Avenida Pikolo, 14',
+      43220,
+      'Kaito',
+      'Freezer'
+    );
+
+    const amount = new Amount(400, '€');
+
+    const owner = new Owner('Krilin');
+
+    return new Estate(
+      '12344321',
+      address,
+      amount,
+      owner
     );
   }
 

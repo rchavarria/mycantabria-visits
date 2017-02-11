@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
+import { CentralStoreService } from '../central-store.service';
+
 import { Address } from '../models/address.model';
-import { Amount } from './amount.model';
-import { Owner } from './owner.model';
-import { Estate } from './estate.model';
+import { Amount } from '../models/amount.model';
+import { Owner } from '../models/owner.model';
+import { Estate } from '../models/estate.model';
 
 @Component({
   selector: 'estate',
@@ -13,26 +15,12 @@ import { Estate } from './estate.model';
 export class EstateComponent implements OnInit {
   estate: Estate;
 
-  constructor() { }
+  constructor(private store: CentralStoreService) {
+    this.store = store;
+  }
 
   ngOnInit() {
-    const address: Address = new Address(
-      'Avenida Pikolo, 14',
-      43220,
-      'Kaito',
-      'Freezer'
-    );
-
-    const amount = new Amount(400, '€');
-
-    const owner = new Owner('Krilin');
-
-    this.estate = new Estate(
-      '12344321',
-      address,
-      amount,
-      owner
-    );
+    this.estate = this.store.getEstate();
   }
 
 }
