@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { CentralStoreService } from './central-store.service';
+
 import { AppComponent } from './app.component';
 import { EstateComponent } from './estate/estate.component';
 import { CustomerComponent } from './customer/customer.component';
@@ -30,7 +32,9 @@ import { VisitManagementComponent } from './visit-management/visit-management.co
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    CentralStoreService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
