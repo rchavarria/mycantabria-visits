@@ -2,7 +2,7 @@ import { Component, OnInit, Input, ElementRef } from '@angular/core';
 
 import * as SignaturePad from 'signature_pad';
 
-import { Signature } from '../signatures/signature.model';
+import { Signature } from '../models/signature.model';
 
 @Component({
   selector: 'signature',

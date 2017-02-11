@@ -7,6 +7,8 @@ import { Amount } from './models/amount.model';
 import { Owner } from './models/owner.model';
 import { Estate } from './models/estate.model';
 import { Footer } from './models/footer.model';
+import { Signature } from './models/signature.model';
+import { Person } from './models/person.model';
 
 @Injectable()
 export class CentralStoreService {
@@ -63,6 +65,10 @@ export class CentralStoreService {
 
   getFooter() {
     return new Footer();
+  }
+
+  getSignature(name) {
+    return new Signature(new Person(name));
   }
 
 }
