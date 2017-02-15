@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 
 import { Address } from './models/address.model';
-import { Agent } from './models/agent.model';
 import { Amount } from './models/amount.model';
 import { Company } from './models/company.model';
 import { Customer } from './models/customer.model';
@@ -75,7 +74,7 @@ export class CentralStoreService {
   }
 
   getVisit() {
-    const agent = new Agent('Son Goku');
+    const agent = new Person('Son Goku');
 
     return new Visit(
       new Date(),

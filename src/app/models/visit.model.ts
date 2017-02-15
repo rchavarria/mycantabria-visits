@@ -1,17 +1,17 @@
-  
-import { Agent } from './agent.model';
+
+import { Person } from './person.model';
 
 export class Visit {
   date: Date;
   time: Date;
   subject: string;
-  agent: Agent;
+  agent: Person;
 
   constructor(
     date: Date,
     time: Date,
     subject: string,
-    agent: Agent
+    agent: Person
   ) {
     this.date = date;
     this.time = time;
