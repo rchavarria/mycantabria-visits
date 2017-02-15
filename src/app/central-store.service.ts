@@ -1,13 +1,11 @@
 import { Injectable } from '@angular/core';
 
 import { Address } from './models/address.model';
-import { Agent } from './models/agent.model';
 import { Amount } from './models/amount.model';
 import { Company } from './models/company.model';
 import { Customer } from './models/customer.model';
 import { Estate } from './models/estate.model';
 import { Footer } from './models/footer.model';
-import { Owner } from './models/owner.model';
 import { Person } from './models/person.model';
 import { Signature } from './models/signature.model';
 import { Visit } from './models/visit.model';
@@ -56,7 +54,7 @@ export class CentralStoreService {
 
     const amount = new Amount(400, '€');
 
-    const owner = new Owner('Krilin');
+    const owner = new Person('Krilin');
 
     return new Estate(
       '12344321',
@@ -75,7 +73,7 @@ export class CentralStoreService {
   }
 
   getVisit() {
-    const agent = new Agent('Son Goku');
+    const agent = new Person('Son Goku');
 
     return new Visit(
       new Date(),

@@ -1,19 +1,19 @@
 
 import { Address } from './address.model';
 import { Amount } from './amount.model';
-import { Owner } from './owner.model';
+import { Person } from './person.model';
 
 export class Estate {
   id: string;
   address: Address;
   monthlyAmount: Amount;
-  owner: Owner;
+  owner: Person;
 
   constructor(
     id: string,
     address: Address,
     monthlyAmount: Amount,
-    owner: Owner
+    owner: Person
   ) {
     this.id = id;
     this.address = address;
