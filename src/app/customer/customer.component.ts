@@ -11,6 +11,7 @@ import { Customer } from '../models/customer.model';
 })
 export class CustomerComponent implements OnInit {
   customer: Customer;
+  expanded: boolean;
 
   constructor(private store: CentralStoreService) {
     this.store = store;
@@ -18,6 +19,10 @@ export class CustomerComponent implements OnInit {
 
   ngOnInit() {
     this.customer = this.store.getCustomer();
+  }
+
+  toggleExpand() {
+    this.expanded = !this.expanded;
   }
 
 }
