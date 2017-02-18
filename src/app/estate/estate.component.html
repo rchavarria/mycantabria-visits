@@ -1,14 +1,27 @@
 <div class="estate row">
+  <div class="small-12 columns">
 
-  <div class="small-4 columns">
-    <img src="./assets/img/estate-image.jpg"/>
+    <div class="row" (click)="toggleExpand()">
+      <div class="small-12 columns component-header">
+        Vivienda en {{ estate.address.street }}
+        por {{ estate.monthlyAmount.quantity }}{{ estate.monthlyAmount.currency }}/mes
+        <span *ngIf="!expanded">⟱</span>
+        <span *ngIf="expanded">⟰</span>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="expanded">
+      <div class="small-4 columns">
+        <img src="./assets/img/estate-image.jpg"/>
+      </div>
+
+      <div class="small-8 columns">
+        <p><b>Código</b>: {{ estate.id }}</p>
+        <p><b>Dirección</b>: {{ estate.address.street }}</p>
+        <p><b>Precio</b>: {{ estate.monthlyAmount.quantity }}{{ estate.monthlyAmount.currency }}/mes</p>
+        <p><b>Propietario</b>: {{ estate.owner.name }}</p>
+      </div>
+    </div>
+
   </div>
-
-  <div class="small-8 columns">
-    <p><b>Código</b>: {{ estate.id }}</p>
-    <p><b>Dirección</b>: {{ estate.address.street }}</p>
-    <p><b>Precio</b>: {{ estate.monthlyAmount.quantity }}{{ estate.monthlyAmount.currency }}/mes</p>
-    <p><b>Propietario</b>: {{ estate.owner.name }}</p>
-  </div>
-
 </div>

@@ -11,6 +11,7 @@ import { Estate } from '../models/estate.model';
 })
 export class EstateComponent implements OnInit {
   estate: Estate;
+  expanded: boolean;
 
   constructor(
     private store: CentralStoreService
@@ -18,6 +19,10 @@ export class EstateComponent implements OnInit {
 
   ngOnInit() {
     this.estate = this.store.getEstate();
+  }
+
+  toggleExpand() {
+    this.expanded = !this.expanded;
   }
 
 }
