@@ -4,3 +4,8 @@
   background-color: #4a4b5c;
 }
 
+/* overwriting Foundation styles */
+.button {
+  background-color: #4a4b5c;
+}
+
