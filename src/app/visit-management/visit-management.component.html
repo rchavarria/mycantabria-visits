@@ -1,15 +1,43 @@
 <div class="visit-management row">
-  <ul>
-    <li>Visita</li>
-    <li>Fecha: {{ visit.date | date:'shortDate' }}</li>
-    <li>Hora: {{ visit.time | date:'mediumTime' }}</li>
-  </ul>
+  <div class="small-12 columns">
 
-  <div class="subject">
-    Asunto: {{ visit.subject }}
-  </div>
+    <div class="row" (click)="toggleExpand()">
+      <div class="small-12 columns component-header">
+        {{ visit.subject }} -
+        {{ visit.date | date:'shortDate' }} -
+        {{ visit.time | date:'mediumTime' }} -
+        <span *ngIf="!expanded">⟱</span>
+        <span *ngIf="expanded">⟰</span>
+      </div>
+    </div>
 
-  <div class="agent">
-    Agente: {{ visit.agent.name }}
+    <div class="row" *ngIf="expanded">
+      <div class="small-12 columns">
+        <div class="row">
+          <div class="small-3 columns">
+            Visita
+          </div>
+          <div class="small-5 columns">
+            Fecha: {{ visit.date | date:'shortDate' }}
+          </div>
+          <div class="small-4 columns">
+            Hora: {{ visit.time | date:'mediumTime' }}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="small-12 columns">
+            Asunto: {{ visit.subject }}
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="small-12 columns">
+            Agente: {{ visit.agent.name }}
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>

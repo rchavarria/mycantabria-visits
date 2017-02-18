@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+.component-header {
+  background-color: #4a4b5c;
+}
+
+/* overwriting Foundation styles */
+.button {
+  background-color: #4a4b5c;
+}
+

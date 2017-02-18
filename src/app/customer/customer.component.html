@@ -1,51 +1,63 @@
 <div class="customer row">
-
   <div class="small-12 columns">
-    <p><b>Código</b>: {{ customer.id }}</p>
-  </div>
 
-  <div class="small-12 columns">
-    <p><b>Nombre</b>: {{ customer.name }}</p>
-  </div>
+    <div class="row" (click)="toggleExpand()">
+      <div class="small-12 columns component-header">
+        Cliente: {{ customer.name }} ( {{ customer.email }} )
+        <span *ngIf="!expanded">⟱</span>
+        <span *ngIf="expanded">⟰</span>
+      </div>
+    </div>
 
-  <div class="small-12 columns">
-    <p><b>N.I.F.</b>: N/A</p>
-  </div>
+    <div class="row" *ngIf="expanded">
+      <div class="small-12 columns">
+        <p><b>Código</b>: {{ customer.id }}</p>
+      </div>
 
-  <div class="small-12 columns">
-    <p><b>Fecha de alta</b>: {{ customer.signupDate | date:'shortDate' }}</p>
-  </div>
+      <div class="small-12 columns">
+        <p><b>Nombre</b>: {{ customer.name }}</p>
+      </div>
 
-  <div class="small-12 columns">
-    <p><b>Dirección</b>: N/A</p>
-  </div>
+      <div class="small-12 columns">
+        <p><b>N.I.F.</b>: N/A</p>
+      </div>
 
-  <div class="small-12 columns">
-    <p><b>Municipio</b>: N/A</p>
-  </div>
+      <div class="small-12 columns">
+        <p><b>Fecha de alta</b>: {{ customer.signupDate | date:'shortDate' }}</p>
+      </div>
 
-  <div class="small-12 columns">
-    <p><b>Provincia</b>: N/A</p>
-  </div>
+      <div class="small-12 columns">
+        <p><b>Dirección</b>: N/A</p>
+      </div>
 
-  <div class="small-12 columns">
-    <p><b>Móvil</b>: {{ customer.mainPhone }}</p>
-  </div>
+      <div class="small-12 columns">
+        <p><b>Municipio</b>: N/A</p>
+      </div>
 
-  <div class="small-12 columns">
-    <p><b>Teléfono</b>: N/A</p>
-  </div>
+      <div class="small-12 columns">
+        <p><b>Provincia</b>: N/A</p>
+      </div>
 
-  <div class="small-12 columns">
-    <p><b>Teléfono 2</b>: N/A</p>
-  </div>
+      <div class="small-12 columns">
+        <p><b>Móvil</b>: {{ customer.mainPhone }}</p>
+      </div>
 
-  <div class="small-12 columns">
-    <p><b>Fax</b>: N/A</p>
-  </div>
+      <div class="small-12 columns">
+        <p><b>Teléfono</b>: N/A</p>
+      </div>
 
-  <div class="small-12 columns">
-    <p><b>E-mail</b>: {{ customer.email }}</p>
+      <div class="small-12 columns">
+        <p><b>Teléfono 2</b>: N/A</p>
+      </div>
+
+      <div class="small-12 columns">
+        <p><b>Fax</b>: N/A</p>
+      </div>
+
+      <div class="small-12 columns">
+        <p><b>E-mail</b>: {{ customer.email }}</p>
+      </div>
+    </div>
   </div>
 
 </div>

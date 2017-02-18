@@ -11,13 +11,19 @@ import { Visit } from '../models/visit.model';
 })
 export class VisitManagementComponent implements OnInit {
   visit: Visit;
+  expanded: boolean;
 
   constructor(private store: CentralStoreService) {
     this.store = store;
+    this.expanded = false;
   }
 
   ngOnInit() {
     this.visit = this.store.getVisit();
+  }
+
+  toggleExpand() {
+    this.expanded = !this.expanded;
   }
 
 }
